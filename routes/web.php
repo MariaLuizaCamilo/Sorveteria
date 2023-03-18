@@ -18,4 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sorvetes/create', [SorvetesController::class, 'create'])->name('sorvetes.create');
+Route::get('/sorvetes', [SorvetesController::class, 'index'])->name('sorvetes.index');
+
+Route::get('sorvetes/create', [SorvetesController::class, 'create'])->name('sorvetes.create');
+
+Route::post('sorvetes/store', [SorvetesController::class, 'store'])->name('sorvetes.store');
+

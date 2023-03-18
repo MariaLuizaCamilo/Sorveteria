@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sovete extends Model
+class Sorvete extends Model
 {
     use HasFactory;
 
@@ -17,7 +17,6 @@ class Sovete extends Model
         'nome',
         'sabor',
         'valor',
-
 
 
     ];
