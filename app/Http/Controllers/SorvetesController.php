@@ -21,4 +21,22 @@ class SorvetesController extends Controller
         return view('sorvetes.create');
     }
 
+    public function store(Request $requisicao)
+    {
+        $sorvete = new Sorvete();
+
+        $sorvete->nome = $requisicao->nome;
+        $sorvete->sabor = $requisicao->sabor;
+        $sorvete->valor = $requisicao->valor;
+
+        $sorvete->save();
+
+        return redirect()->route('sorvetes.show', $sorvete->id);
+    }
+
+    public function show(sorvete $sorvete)
+    {
+        return view('sorvetes.view', compact('sorvete'));
+    }
+
 }

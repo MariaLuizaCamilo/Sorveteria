@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 text-aling="center">SORVETERIA</h1>
-    <a href="{{ route('sorvetes.index') }}" >Sorvete</a>
+    <a href="{{ route('sorvetes.create') }}" >Novo Sorvete</a>
 
     <div>
         <h1 class="center">Lista de sabores</h1>
@@ -27,7 +27,11 @@
                     <td>{{ $sorvete->nome }}</td>
                     <td>{{ $sorvete->sabor }}</td>
                     <td>{{ $sorvete->valor }}</td>
-                    <td></td>
+                    <td>
+                        <a class="link" href="{{ route('sorvetes.show', $sorvete->id) }}">
+                            Ver
+                        </a>
+                    </td>
                 </tr>
             @endforeach
         </table>

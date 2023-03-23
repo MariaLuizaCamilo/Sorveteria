@@ -24,3 +24,5 @@ Route::get('sorvetes/create', [SorvetesController::class, 'create'])->name('sorv
 
 Route::post('sorvetes/store', [SorvetesController::class, 'store'])->name('sorvetes.store');
 
+Route::get('/sorvetes/{sorvete}', [SorvetesController::class, 'show'])->name('sorvetes.show');
+

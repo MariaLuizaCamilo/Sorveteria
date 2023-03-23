@@ -7,8 +7,11 @@
         <title>Document</title>
     </head>
     <body>
-        <form action="{{route('sorvete.store')}}" method="POST">
+        <form method="POST" action="{{ route('sorvetes.store') }}">
+
             @csrf
+
+        <div  class="formulario">
             <div>
             <label for="">Nome do Sorvete</label>
             <input type="text" name="nome">
@@ -21,12 +24,34 @@
 
 
             <div>
-                <label for="">Sabor do sorvete</label>
+                <label for="">Valor do sorteve</label>
                 <input type="number" name="valor">
             </div>
-            <input type="submit">SALVAR<input>
-            <div>
+
+
+            <input type="submit" value="Salvar" class="botao">
+        </div>
 
         </form>
+
+        <style>
+            .formulario{
+                text-align: center;
+                font-size: 35px;
+                margin-top: 16%;
+                border:groove;
+
+            }
+
+            body{
+                background-color: rgb(199, 152, 243);.
+            }
+
+            .botao{
+                font-size: 25px;
+                border-radius: 20px;
+            }
+
+        </style>
     </body>
 </html>
