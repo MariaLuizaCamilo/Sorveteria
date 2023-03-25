@@ -19,6 +19,16 @@
 
 
             <a href="{{ route('sorvetes.index') }}">Voltar a lista</a>
+
+
+            <a  href="{{ route('sorvetes.edit', $sorvete->id) }}">Editar</a>
+
+            <form method="POST" action="{{ route('sorvetes.destroy', $sorvete->id) }}">
+                @csrf
+                @method('DELETE')
+
+                <input type="submit" value="Excluir sorvete" >
+            </form>
         </div>
     </body>
 </html>

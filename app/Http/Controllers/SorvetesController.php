@@ -54,4 +54,11 @@ class SorvetesController extends Controller
         return redirect()->route('sorvetes.show', $sorvete->id);
     }
 
+    public function destroy(Sorvete $sorvete)
+    {
+        $sorvete->delete();
+
+        return redirect()->route('sorvetes.index');
+    }
+
 }

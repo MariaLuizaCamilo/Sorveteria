@@ -29,3 +29,5 @@ Route::get('/sorvetes/{sorvete}', [SorvetesController::class, 'show'])->name('so
 Route::get('/sorvetes/{sorvete}/editar', [SorvetesController::class, 'edit'])->name('sorvetes.edit');
 
 Route::put('/sorvetes/{sorvete}', [SorvetesController::class, 'update'])->name('sorvetes.update');
+
+Route::delete('/sorvetes/{sorvete}', [SorvetesController::class, 'destroy'])->name('sorvetes.destroy');
