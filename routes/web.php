@@ -26,3 +26,6 @@ Route::post('sorvetes/store', [SorvetesController::class, 'store'])->name('sorve
 
 Route::get('/sorvetes/{sorvete}', [SorvetesController::class, 'show'])->name('sorvetes.show');
 
+Route::get('/sorvetes/{sorvete}/editar', [SorvetesController::class, 'edit'])->name('sorvetes.edit');
+
+Route::put('/sorvetes/{sorvete}', [SorvetesController::class, 'update'])->name('sorvetes.update');

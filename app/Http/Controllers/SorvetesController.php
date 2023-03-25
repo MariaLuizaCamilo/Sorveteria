@@ -31,12 +31,27 @@ class SorvetesController extends Controller
 
         $sorvete->save();
 
-        return redirect()->route('sorvetes.show', $sorvete->id);
+        return redirect ()->route('sorvetes.show', $sorvete->id);
     }
 
     public function show(sorvete $sorvete)
     {
-        return view('sorvetes.view', compact('sorvete'));
+        return view ('sorvetes.view', compact('sorvete'));
+    }
+
+    public function edit(Sorvete $sorvete)
+    {
+        // Retorna a view gatos.edit com o objeto $gato
+        return view ('sorvetes.edit', compact('sorvete'));
+    }
+
+    public function update(Request $requisicao, Sorvete $sorvete)
+    {
+        // Atualiza o objeto com os dados da requisição
+        $sorvete->update($requisicao->all());
+
+        // Redireciona para a página de detalhes do sovete
+        return redirect()->route('sorvetes.show', $sorvete->id);
     }
 
 }
